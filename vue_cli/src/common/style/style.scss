@@ -1,0 +1,9 @@
+// 这个路径要配 以 App.vue 为出发点的路径
+@import './common/style/fonts.css';
+
+// 未配置 sass-loader 则不能生效, 也不报错
+.a {
+  .b {
+     color:#f00;
+   }
+ }
