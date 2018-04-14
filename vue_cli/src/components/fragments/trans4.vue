@@ -25,7 +25,9 @@
 
 <script>
     import comC from './comC';
-    import $  from 'jquery'
+    // import $  from 'jquery';
+    import  Velocity from 'velocity-animate'
+    // console.log(Velocity.hook);
   export default {
     name: 'el4',
     data() {
@@ -48,14 +50,12 @@
         }
       },
       beforeEnter(el) {
-        $(el).css({
-          position: 'absolute',
-          top: '-100px',
-          opacity: 0
-        })
+        Velocity.hook(el, 'position', 'absolute');
+        Velocity.hook(el, 'top', '-100px');
+        Velocity.hook(el, 'opacity', '0');
       },
       enter(el, done) {
-        $(el).animate({
+        Velocity(el, {
           top: 0,
           opacity: 1
         }, {
@@ -64,19 +64,15 @@
         })
       },
       afterEnter(el) {
-        $(el).css({
-          position: 'static'
-        })
+        el.style.position = 'static';
       },
       enterCancelled(el) {},
       beforeLeave(el) {
-        $(el).css({
-          position: 'absolute',
-          top: 0
-        })
+        Velocity.hook(el, 'position', 'absolute');
+        Velocity.hook(el, 'top', '0');
       },
       leave(el, done) {
-        $(el).animate({
+        Velocity(el, {
           top: '500px',
           opacity: 0
         }, {
@@ -85,9 +81,7 @@
         })
       },
       afterLeave(el) {
-        $(el).css({
-          position: 'static'
-        })
+        el.style.position = 'static';
       },
       leaveCancelled(el) {}
     }

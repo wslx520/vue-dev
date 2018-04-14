@@ -8,6 +8,6 @@
         name: 'com-b',
         template: `<p>component b. hahaha</p>`
     });
-    export {comA1}
+    export default comA1
     export {comB}
 </script>
