@@ -4,6 +4,10 @@
     <h1>{{ msg }}</h1>
     <h2><i class="icon-ok"></i>Essential Links</h2>
     <ul>
+      <li><router-link to="/directives">directives</router-link></li>
+      <li><router-link to="/transition">transition</router-link></li>
+    </ul>
+    <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
       <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
@@ -22,7 +26,7 @@
 </template>
 
 <script>
-import aaa from './aaa/a'
+import aaa from './fragments/a'
 export default {
   name: 'HelloWorld',
   components: {aaa},
