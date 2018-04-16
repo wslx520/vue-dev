@@ -7,7 +7,10 @@
         <p>而且这样一来路由参数可随意变化, you can <button @click="change">change</button> then click </p>
         本嵌套路由还可以继续嵌套下级:
         <router-link :to="{name: 'sub_sub2', query: {from: referrer}}">去下级</router-link>
-        <router-view></router-view>
+        <transition name="fade">
+            <router-view></router-view>
+        </transition>
+        
     </div>
     
 </template>

@@ -6,6 +6,7 @@
     <ul>
       <li><router-link to="/directives">directives</router-link></li>
       <li><router-link to="/transition">transition</router-link></li>
+      <li><router-link to="/eventbus">eventbus</router-link></li>
       <li><router-link to="/routes">routes</router-link></li>
     </ul>
     <router-view></router-view>

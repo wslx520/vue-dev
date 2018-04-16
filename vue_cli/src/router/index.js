@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Directive from '@/components/Directive'
 import Transition from '@/components/Transition'
+import Cross from '@/components/Cross'
 import Routes from '@/components/Routes'
 import subroute1 from '@/components/fragments/subroute1'
 import subroute2 from '@/components/fragments/subroute2'
@@ -26,6 +27,11 @@ export default new Router({
       path: '/transition',
       name: 'transition',
       component: Transition
+    },
+    {
+      path: '/eventbus',
+      name: 'eventbus',
+      component: Cross
     },
     {
       path: '/routes',
